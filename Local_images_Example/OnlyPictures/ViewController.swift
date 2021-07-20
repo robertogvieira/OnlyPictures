@@ -86,6 +86,10 @@ class ViewController: UIViewController {
 
 
 extension ViewController: OnlyPicturesDataSource {
+    func numberOfPictures(onlyPictureView: OnlyPictures) -> Int {
+        0
+    }
+    
     func numberOfPictures() -> Int {
         return self.pictures.count
     }
@@ -98,6 +102,10 @@ extension ViewController: OnlyPicturesDataSource {
 }
 
 extension ViewController: OnlyPicturesDelegate {
+    func pictureView(onlyPictureView: OnlyPictures, _ imageView: UIImageView, didSelectAt index: Int) {
+        //
+    }
+    
     
     // ---------------------------------------------------
     // receive an action of selected picture tap index
