@@ -45,8 +45,8 @@ public class OnlyPictures: UIView {
         didSet {
             if self.dataSource != nil {
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                    self.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: { [weak self] in
+                    self?.reloadData()
                 })
             }
         }
